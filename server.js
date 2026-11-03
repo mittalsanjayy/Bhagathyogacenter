@@ -359,22 +359,28 @@ function createApp({
 
 if (require.main === module) {
   const port = Number(process.env.PORT) || 3000;
-  const databasePath = process.env.BHAGATH_DB_PATH || DEFAULT_DATABASE_PATH;
+  const databasePath =
+    process.env.BHAGATH_DB_PATH || DEFAULT_DATABASE_PATH;
+
   const database = createPaymentStore(databasePath);
   const app = createApp({ database });
+
   const server = app.listen(port, "0.0.0.0", () => {
-    console.log(`Bhagath Yoga Center is available at http://localhost:${port}`);
+    console.log(`Bhagath Yoga Center running on port ${port}`);
+
     if (!getCredentials(process.env).configured) {
-      console.warn("Razorpay is not configured. Add approved credentials to .env to enable checkout.");
+      console.warn("Razorpay credentials are not configured.");
     }
   });
-  server.on("close", () => database.close());
-}
 
-module.exports = {
-  PLANS,
-  createApp,
-  createOrderToken,
-  createPaymentStore,
-  getCredentials
-};
+  server.on("close", () => database.close());
+} else {
+  const databasePath =
+    process.env.BHAGATH_DB_PATH ||
+    (process.env.VERCEL
+      ? "/tmp/payments.sqlite"
+      : DEFAULT_DATABASE_PATH);
+
+  const database = createPaymentStore(databasePath);
+  module.exports = createApp({ database });
+}
