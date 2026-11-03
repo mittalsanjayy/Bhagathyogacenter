@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f2e9">
+  <title>Yoga Plans &amp; Payments | Bhagath Yoga Center</title>
+  <meta name="description" content="Explore Bhagath Yoga Center memberships and the complete-course plan in Kalyan Nagar, Bengaluru.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="payments.css">
+  <script src="site-config.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="https://checkout.razorpay.com/v1/checkout.js" defer></script>
+  <script src="payments.js" defer></script>
+  <script src="motion.js" defer></script>
+</head>
+<body class="payment-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="top">
+    <a class="brand" href="index.html" aria-label="Bhagath Yoga Center home">
+      <span class="brand-logo-circle"><img class="brand-logo" src="assets/logo.jpeg" alt=""></span>
+      <span class="brand-copy">
+        <span class="brand-name">BHAGATH YOGA CENTER</span>
+        <span class="brand-location">KALYAN NAGAR</span>
+      </span>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation">
+      <span></span><span></span>
+    </button>
+    <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="index.html#classes">Classes</a>
+      <a href="payments.html" aria-current="page">Plans &amp; Payments</a>
+      <a class="nav-cta" href="index.html#contact">Get in touch <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="plans-intro reveal">
+      <p class="eyebrow"><span class="eyebrow-line"></span> Find a practice that feels right</p>
+      <h1>Plans for your <em>next step.</em></h1>
+      <p>Choose a membership to continue to Razorpay Checkout. Review the plan and amount before paying.</p>
+      <a class="text-link" href="index.html">← Back to Home</a>
+    </section>
+
+    <section class="plans-section" aria-label="Yoga memberships">
+      <div class="plan-grid">
+        <article class="plan-card plan-card-monthly">
+          <div class="plan-card-top">
+            <span class="plan-number">01 / FLEXIBLE</span>
+            <span class="plan-mark" aria-hidden="true">✳</span>
+          </div>
+          <h2>One month.<br><em>One step.</em></h2>
+          <p class="plan-description">A flexible way to begin or return to your yoga practice.</p>
+          <div class="plan-price">
+            <span class="price-amount">₹2,500</span>
+            <span class="price-caption">Monthly membership</span>
+          </div>
+          <ul class="plan-details">
+            <li>1 month</li>
+            <li>Choose from weekday class times</li>
+          </ul>
+          <button class="button button-dark plan-action" type="button" data-plan-pay="monthly">
+            Pay Now <span aria-hidden="true">↗</span>
+          </button>
+        </article>
+
+        <article class="plan-card plan-card-featured plan-card-three-months">
+          <div class="plan-card-top">
+            <span class="plan-number">02 / CONTINUE YOUR PRACTICE</span>
+            <span class="plan-mark" aria-hidden="true">02</span>
+          </div>
+          <h2>Three months.<br><em>Find your rhythm.</em></h2>
+          <p class="plan-description">A little more time to settle into a consistent routine.</p>
+          <div class="plan-price">
+            <span class="price-amount">₹6,500</span>
+            <span class="price-caption">3-month membership</span>
+          </div>
+          <ul class="plan-details">
+            <li>3 months</li>
+            <li>Choose from weekday class times</li>
+          </ul>
+          <button class="button button-dark plan-action" type="button" data-plan-pay="three-months">
+            Pay Now <span aria-hidden="true">↗</span>
+          </button>
+        </article>
+
+        <article class="plan-card plan-card-six-months">
+          <div class="plan-card-top">
+            <span class="plan-number">03 / MAKE IT A HABIT</span>
+            <span class="plan-mark" aria-hidden="true">03</span>
+          </div>
+          <h2>Six months.<br><em>Go deeper.</em></h2>
+          <p class="plan-description">Build room for your practice over the longer term.</p>
+          <div class="plan-price">
+            <span class="price-amount">₹12,000</span>
+            <span class="price-caption">6-month membership</span>
+          </div>
+          <ul class="plan-details">
+            <li>6 months</li>
+            <li>Choose from weekday class times</li>
+          </ul>
+          <button class="button button-dark plan-action" type="button" data-plan-pay="six-months">
+            Pay Now <span aria-hidden="true">↗</span>
+          </button>
+        </article>
+
+        <article class="plan-card plan-card-yearly">
+          <div class="plan-card-top">
+            <span class="plan-number">04 / A YEAR OF PRACTICE</span>
+            <span class="plan-mark" aria-hidden="true">04</span>
+          </div>
+          <h2>One year.<br><em>Keep growing.</em></h2>
+          <p class="plan-description">Make a lasting place for practice in your routine.</p>
+          <div class="plan-price">
+            <span class="price-amount">₹18,000</span>
+            <span class="price-caption">Yearly membership</span>
+          </div>
+          <ul class="plan-details">
+            <li>12 months</li>
+            <li>Choose from weekday class times</li>
+          </ul>
+          <button class="button button-dark plan-action" type="button" data-plan-pay="yearly">
+            Pay Now <span aria-hidden="true">↗</span>
+          </button>
+        </article>
+
+        <article class="plan-card plan-card-complete-course">
+          <div class="plan-card-top">
+            <span class="plan-number">05 / COMPLETE COURSE</span>
+            <span class="plan-mark" aria-hidden="true">✳</span>
+          </div>
+          <h2>Complete Yoga<br><em>&amp; Fitness.</em></h2>
+          <p class="plan-description">Ask the center to confirm course details before enrolling.</p>
+          <div class="plan-price">
+            <span class="price-amount">₹20,000</span>
+            <span class="price-caption">Complete Yoga and Fitness course</span>
+          </div>
+          <ul class="plan-details">
+            <li>Complete Yoga and Fitness course</li>
+            <li>Confirm course details with the center</li>
+          </ul>
+          <button class="button button-dark plan-action" type="button" data-plan-pay="complete-course">
+            Pay Now <span aria-hidden="true">↗</span>
+          </button>
+        </article>
+      </div>
+      <p class="upi-app-note" id="razorpay-config-note" role="status" aria-live="polite">Checking secure Razorpay Checkout configuration…</p>
+    </section>
+
+    <section class="payment-stories" aria-labelledby="payment-stories-title">
+      <div class="payment-stories-heading reveal">
+        <p class="eyebrow">Practice, at every stage</p>
+        <h2 id="payment-stories-title">Real Stories, <em>Real Progress.</em></h2>
+        <p>Every yoga journey is personal. Explore moments from our community and the practice they share.</p>
+      </div>
+      <div class="payment-transformation-grid" aria-label="Yoga transformation photographs">
+        <figure class="payment-photo-card reveal"><img src="assets/testimony.png" alt="Yoga transformation photograph, shared without a personal claim." loading="lazy"><figcaption>Every journey is personal.</figcaption></figure>
+        <figure class="payment-photo-card reveal"><img src="assets/testimony2.png" alt="Yoga transformation photograph, shared without a personal claim." loading="lazy"><figcaption>An ongoing practice.</figcaption></figure>
+        <figure class="payment-photo-card reveal"><img src="assets/testimony3.png" alt="Yoga transformation photograph, shared without a personal claim." loading="lazy"><figcaption>One breath at a time.</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="payment-testimonials" aria-labelledby="payment-testimonials-title">
+      <div class="payment-testimonials-heading reveal">
+        <p class="eyebrow">A sense of the studio</p>
+        <h2 id="payment-testimonials-title">Stories are best <em>told honestly.</em></h2>
+        <p>No written student testimonials have been provided for publication. These studio and practice photos are shared without invented names, quotes, or personal stories.</p>
+      </div>
+      <div class="payment-testimonial-grid" aria-label="Studio and yoga practice photographs">
+        <figure class="payment-testimonial-card reveal"><img src="assets/group.jpeg" alt="A group gathered together for a yoga class." loading="lazy"><figcaption>Practice in community</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="payment-details reveal" id="payment-details" aria-labelledby="payment-details-title">
+      <span class="reassurance-mark" aria-hidden="true">✳</span>
+      <div class="payment-details-copy">
+        <p class="eyebrow">Your selected membership</p>
+        <h2 id="payment-details-title">Payment <em>details.</em></h2>
+        <p id="selected-plan-message" aria-live="polite">Choose a membership above to see its amount and payment options.</p>
+        <dl class="selected-plan-summary" id="selected-plan-summary" hidden>
+          <div><dt>Membership</dt><dd id="selected-plan-name"></dd></div>
+          <div><dt>Merchant</dt><dd id="selected-plan-payee"></dd></div>
+          <div><dt>Amount</dt><dd id="selected-plan-price"></dd></div>
+        </dl>
+        <p class="payment-setup-note" id="payment-setup-note" role="status" hidden></p>
+        <p class="payment-status" id="payment-status" role="status" aria-live="polite"></p>
+        <button class="button button-dark plan-action" id="upi-pay-button" type="button" hidden>Pay Now <span aria-hidden="true">↗</span></button>
+        <div class="payment-contact-links">
+          <a class="text-link link-underlined" id="selected-plan-whatsapp" href="https://wa.me/918971669320" target="_blank" rel="noopener noreferrer">Ask about this membership on WhatsApp <span aria-hidden="true">↗</span></a>
+          <a class="text-link link-underlined" id="selected-plan-email" data-contact-email href="index.html#contact">Email the center <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="payment-reassurance reveal">
+      <span class="reassurance-mark" aria-hidden="true">✳</span>
+      <div>
+        <p class="eyebrow">A note before you pay</p>
+        <h2>Payment should feel <em>clear and secure.</em></h2>
+        <p>Payments are processed by Razorpay using the methods enabled for the center’s account. The server verifies each payment with Razorpay before displaying a confirmed status. Never share your UPI PIN or banking password with anyone.</p>
+      </div>
+      <a class="text-link link-underlined" href="index.html#contact">Contact the center <span aria-hidden="true">↗</span></a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-main reveal">
+      <div class="footer-brand">
+        <a class="brand brand-footer" href="index.html" aria-label="Bhagath Yoga Center home">
+          <span class="brand-logo-circle"><img class="brand-logo" src="assets/logo.jpeg" alt=""></span>
+          <span class="brand-copy"><span class="brand-name">BHAGATH YOGA CENTER</span><span class="brand-location">KALYAN NAGAR</span></span>
+        </a>
+        <p>A neighbourhood practice in<br>HRBR Layout, Bengaluru.</p>
+      </div>
+      <div class="footer-nav"><span>Explore</span><a href="index.html">Home</a><a href="index.html#classes">Classes</a><a href="payments.html">Plans &amp; Payments</a></div>
+      <div class="footer-contact"><span>Find us</span><a data-contact-phone href="index.html#contact">WhatsApp Bhagath Yoga ↗</a><a data-contact-email data-bind="email" href="index.html#contact"></a><a href="index.html#contact">Contact the center ↗</a></div>
+    </div>
+    <div class="footer-bottom"><span>© <span id="year"></span> Bhagath Yoga Center</span><a href="index.html">Back to Home ↑</a><span>Made for a more mindful moment.</span></div>
+  </footer>
+
+  <div class="mobile-contact" aria-label="Quick contact">
+    <a data-contact-call href="index.html#contact"><span aria-hidden="true">☎</span> Call</a>
+    <a data-contact-phone href="index.html#contact"><span aria-hidden="true">↗</span> WhatsApp</a>
+  </div>
+
+  <nav class="floating-social" aria-label="Social media">
+    <a class="floating-social-link floating-whatsapp" data-contact-phone href="index.html#contact" target="_blank" rel="noopener noreferrer" aria-label="Chat with Bhagath Yoga Center on WhatsApp">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M16.04 3.2A12.69 12.69 0 0 0 5.15 22.42L3.4 28.8l6.54-1.72A12.7 12.7 0 1 0 16.04 3.2Zm0 23.2c-2.02 0-4-.54-5.73-1.57l-.41-.24-3.88 1.02 1.04-3.78-.27-.43a10.48 10.48 0 1 1 9.25 5Zm5.75-7.85c-.31-.15-1.84-.91-2.13-1.01-.29-.11-.5-.15-.71.15-.21.31-.82 1.02-1 1.23-.19.2-.37.23-.68.08-.31-.16-1.3-.48-2.48-1.53-.92-.82-1.54-1.84-1.72-2.15-.18-.31-.02-.47.14-.62.14-.14.31-.36.47-.54.15-.18.2-.31.31-.52.1-.21.05-.39-.03-.54-.08-.16-.71-1.7-.98-2.33-.26-.61-.53-.53-.72-.54h-.61c-.21 0-.55.08-.84.39-.29.31-1.1 1.08-1.1 2.62s1.13 3.04 1.28 3.25c.15.21 2.22 3.39 5.38 4.76.75.32 1.33.51 1.79.65.75.24 1.43.2 1.97.12.6-.09 1.84-.75 2.1-1.48.26-.73.26-1.36.18-1.49-.08-.13-.29-.21-.6-.36Z"/></svg>
+    </a>
+    <a class="floating-social-link floating-instagram" data-contact-instagram href="https://www.instagram.com/bhagat_yoga?utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Visit Bhagath Yoga Center on Instagram">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.6" cy="6.7" r="1.2" fill="currentColor"/></svg>
+    </a>
+  </nav>
+</body>
+</html>

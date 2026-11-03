@@ -1,0 +1,161 @@
+.payment-page { width: 100%; min-width: 0; overflow-x: clip; }
+.payment-page main, .payment-page .site-header, .payment-page .site-footer { min-width: 0; }
+.plans-intro {
+  width: min(100% - var(--gutter) * 2, 900px);
+  min-width: 0;
+  margin: 0 auto;
+  padding-block: clamp(68px, 8vw, 104px) 46px;
+  text-align: center;
+}
+.plans-intro .eyebrow { justify-content: center; }
+.plans-intro h1 { margin: 0 auto 18px; font-size: clamp(3rem, 7vw, 5.5rem); }
+.plans-intro > p:not(.eyebrow) { max-width: 600px; margin: 0 auto 20px; color: var(--muted); font-size: 14px; line-height: 1.85; }
+.plans-intro .text-link { margin-top: 12px; }
+.plans-section { width: min(100% - var(--gutter) * 2, 1080px); min-width: 0; margin: 0 auto; padding-bottom: 64px; }
+.plan-grid { --plan-gap: clamp(16px, 2vw, 24px); display: grid; grid-template-areas: "monthly three-months six-months" "yearly complete-course ."; grid-template-columns: repeat(3, minmax(0, 1fr)); grid-auto-rows: auto; gap: var(--plan-gap); min-width: 0; align-items: stretch; }
+.plan-card { display: flex; width: 100%; min-width: 0; min-height: 0; height: auto; align-self: stretch; box-sizing: border-box; flex-direction: column; padding: clamp(26px, 3vw, 36px); border: 1px solid rgba(37,57,46,.18); border-radius: 8px; background: rgba(255,255,255,.76); box-shadow: 0 8px 26px rgba(34,59,49,.045); transition: transform .26s var(--ease), box-shadow .26s var(--ease), border-color .26s var(--ease); }
+.plan-card-monthly { grid-area: monthly; }
+.plan-card-three-months { grid-area: three-months; }
+.plan-card-six-months { grid-area: six-months; }
+.plan-card-yearly { grid-area: yearly; }
+.plan-card-complete-course { grid-area: complete-course; }
+.plan-card:hover { transform: translateY(-3px); border-color: rgba(146,81,58,.42); box-shadow: 0 14px 32px rgba(34,59,49,.09); }
+.plan-card-featured { border-color: rgba(34,59,49,.45); border-top: 1px solid var(--forest); background: #e8ede4; color: var(--ink); }
+.plan-card-featured:hover { border-color: var(--clay); border-top-color: var(--forest); }
+.plan-card-top { display: flex; min-width: 0; min-height: 34px; align-items: flex-start; justify-content: space-between; gap: 8px; margin: 0 0 17px; }
+.plan-number { color: var(--clay); font-size: 9px; font-weight: 700; letter-spacing: .12em; }
+.plan-card-featured .plan-number { color: #d6b69e; }
+.plan-mark { color: var(--sage-dark); font: 500 22px var(--serif); }
+.plan-card h2 { min-width: 0; min-height: 2.25em; margin: 0 0 14px; font-size: clamp(1.7rem, 2.4vw, 2.1rem); line-height: .98; letter-spacing: -.02em; overflow-wrap: anywhere; }
+.plan-card-featured h2 { color: var(--forest); }
+.plan-card h2 em { color: var(--clay); }
+.plan-card-featured h2 em { color: var(--clay); }
+.plan-description { min-width: 0; min-height: 4.4em; margin: 0 0 16px; color: var(--muted); font-size: 12px; line-height: 1.8; }
+.plan-card-featured .plan-description { color: var(--muted); }
+.plan-price { display: flex; min-width: 0; min-height: 88px; flex-direction: column; justify-content: center; margin: 0 0 15px; padding-block: 12px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.plan-card-featured .plan-price { border-color: rgba(34,59,49,.22); }
+.price-amount { color: var(--forest); font: 500 clamp(1.8rem, 3vw, 2.45rem)/1.1 var(--serif); letter-spacing: -.04em; }
+.plan-card-featured .price-amount { color: var(--forest); }
+.price-caption { color: var(--muted); font-size: 10px; overflow-wrap: anywhere; }
+.plan-card-featured .price-caption { color: var(--muted); }
+.plan-details { display: grid; align-content: start; gap: 8px; min-width: 0; min-height: 3.4em; margin: 0 0 18px; padding: 0; color: var(--muted); font-size: 11px; list-style: none; }
+.plan-details li { display: flex; align-items: baseline; gap: 9px; }
+.plan-details li::before { color: var(--clay); content: "✳"; font-size: 9px; }
+.plan-details li { min-width: 0; overflow-wrap: anywhere; }
+.plan-card-featured .plan-details { color: var(--muted); }
+.plan-card-featured .plan-details li::before { color: var(--clay); }
+.plan-card-top, .plan-card h2, .plan-description, .plan-price, .plan-details { flex-shrink: 0; }
+.plan-number { max-width: calc(100% - 34px); line-height: 1.5; }
+.plan-action { display: flex; width: 100%; min-width: 0; height: 48px; min-height: 48px; max-height: 48px; box-sizing: border-box; flex: 0 0 48px; align-self: end; align-items: center; justify-content: center; gap: 12px; margin: auto 0 0; padding: 0 16px; border-width: 1px; border-radius: 2px; cursor: pointer; font-size: 12px; line-height: 1; }
+.plan-action:active { transform: translateY(1px) scale(.985); }
+.plan-action[hidden] { display: none; }
+.plan-card .button-dark { border-color: var(--forest); }
+.plan-card-featured .button-dark { border-color: var(--forest); background: var(--forest); color: var(--paper); }
+.plan-card-featured .button-dark:hover { border-color: var(--clay); background: var(--clay); color: var(--paper); }
+.upi-app-note { margin: 20px 0 0; padding: 14px 18px; border-left: 2px solid var(--clay); background: rgba(220,226,210,.48); color: var(--muted); font-size: 11px; line-height: 1.75; overflow-wrap: anywhere; }
+.upi-app-note strong { color: var(--forest); }
+
+.payment-stories, .payment-testimonials { width: min(100% - var(--gutter) * 2, 1080px); min-width: 0; margin: 0 auto; }
+.payment-stories { padding: clamp(56px, 7vw, 84px) 0 clamp(42px, 5vw, 64px); }
+.payment-stories-heading, .payment-testimonials-heading { max-width: 700px; margin: 0 auto 25px; text-align: center; }
+.payment-stories-heading .eyebrow, .payment-testimonials-heading .eyebrow { justify-content: center; }
+.payment-stories-heading h2, .payment-testimonials-heading h2 { margin: 0 auto 16px; font-size: clamp(2.6rem, 5vw, 4rem); line-height: .98; letter-spacing: -.025em; }
+.payment-stories-heading h2 em, .payment-testimonials-heading h2 em { color: var(--clay); }
+.payment-stories-heading > p:last-child, .payment-testimonials-heading > p:last-child { max-width: 620px; margin: 0 auto; color: var(--muted); font-size: 13px; line-height: 1.8; }
+.payment-transformation-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(12px, 2vw, 20px); }
+.payment-photo-card, .payment-testimonial-card { min-width: 0; margin: 0; overflow: hidden; border: 1px solid rgba(37,57,46,.14); border-radius: 8px; background: rgba(255,255,255,.55); box-shadow: 0 8px 24px rgba(34,59,49,.06); transition: translate .25s var(--ease), box-shadow .25s var(--ease), border-color .25s var(--ease); }
+.payment-photo-card:hover, .payment-testimonial-card:hover { translate: 0 -3px; border-color: rgba(146,81,58,.38); box-shadow: 0 13px 28px rgba(34,59,49,.11); }
+.payment-photo-card img, .payment-testimonial-card img { display: block; width: 100%; height: clamp(150px, 18vw, 210px); object-fit: cover; object-position: center; transition: scale .7s var(--ease); }
+.payment-photo-card:hover img, .payment-testimonial-card:hover img { scale: 1.035; }
+.payment-photo-card figcaption, .payment-testimonial-card figcaption { padding: 9px 12px; color: var(--forest); font: 500 15px/1.35 var(--serif); }
+.payment-testimonials { padding: clamp(34px, 5vw, 56px) 0 clamp(42px, 6vw, 70px); border-top: 1px solid var(--line); }
+.payment-testimonials-heading { margin-bottom: 20px; }
+.payment-testimonial-grid { display: grid; grid-template-columns: minmax(0, 320px); justify-content: center; gap: clamp(12px, 2vw, 20px); max-width: 900px; margin: 0 auto; }
+.payment-testimonial-card figcaption { padding: 8px 11px; font-size: 14px; }
+
+.payment-details { display: grid; grid-template-columns: 55px minmax(0, 1fr); align-items: start; gap: 24px; width: min(100% - var(--gutter) * 2, 1000px); min-width: 0; margin: 0 auto clamp(56px, 8vw, 96px); padding: clamp(25px, 4vw, 45px); background: var(--forest); color: var(--paper); scroll-margin-top: 100px; }
+.payment-details-copy { min-width: 0; overflow-wrap: anywhere; }
+.payment-details .reassurance-mark { color: #d6b69e; }
+.payment-details .eyebrow { margin-bottom: 12px; color: #d6b69e; }
+.payment-details h2 { margin: 0 0 14px; color: var(--paper); font-size: clamp(2rem, 4vw, 3.2rem); }
+.payment-details h2 em { color: #d6b69e; }
+.payment-details-copy > p:not(.eyebrow) { max-width: 700px; margin-bottom: 18px; color: rgba(245,242,233,.78); font-size: 12px; line-height: 1.8; }
+.selected-plan-summary { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; max-width: 760px; margin: 22px 0; padding-block: 17px; border-block: 1px solid rgba(245,242,233,.22); }
+.selected-plan-summary[hidden] { display: none; }
+.selected-plan-summary div { display: grid; gap: 5px; }
+.selected-plan-summary dt { color: rgba(245,242,233,.65); font-size: 10px; }
+.selected-plan-summary dd { margin: 0; color: var(--paper); font: 500 21px var(--serif); }
+.selected-plan-summary div:nth-child(2) dd { overflow-wrap: anywhere; font: 500 16px/1.4 var(--sans); }
+.payment-details .payment-setup-note { padding: 13px 15px; border-left: 2px solid #d6b69e; background: rgba(245,242,233,.08); }
+.payment-details .payment-status { margin: 13px 0; color: #f0dfc8; font-size: 11px; line-height: 1.6; }
+.payment-details .plan-action { width: auto; margin: 12px 0 0; }
+.payment-contact-links { display: flex; flex-wrap: wrap; gap: 16px 25px; margin-top: 22px; }
+.payment-details .text-link { color: var(--paper); }
+.payment-details .text-link:hover { color: #d6b69e; }
+.plan-action:disabled { cursor: wait; opacity: .7; }
+
+.payment-result-page main { display: grid; min-height: calc(100vh - 82px); align-items: center; padding: clamp(40px, 8vw, 90px) var(--gutter); }
+.payment-result { width: min(100%, 820px); margin: 0 auto; padding: clamp(25px, 5vw, 58px); background: var(--forest); color: var(--paper); }
+.payment-result .eyebrow { color: #d6b69e; }
+.payment-result h1 { max-width: 700px; margin: 0 0 18px; color: var(--paper); font-size: clamp(2.6rem, 7vw, 5rem); line-height: .98; }
+.payment-result-message { max-width: 650px; color: rgba(245,242,233,.8); font-size: 13px; line-height: 1.8; }
+.payment-result-summary { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: none; margin-block: 24px; }
+.payment-result-summary dd { overflow-wrap: anywhere; }
+.payment-result-summary div:nth-child(2) dd, .payment-result-summary div:nth-child(4) dd { font: 500 14px/1.5 var(--sans); }
+.payment-result-retry { min-height: 44px; margin: 0 0 18px; cursor: pointer; }
+.payment-result-links { display: flex; flex-wrap: wrap; align-items: center; gap: 18px 26px; }
+.payment-result-links .text-link { color: var(--paper); }
+.payment-result-links .text-link:hover { color: #d6b69e; }
+.payment-result-links .button-dark { border: 1px solid rgba(245,242,233,.4); background: transparent; }
+.payment-result-links .button-dark:hover { border-color: var(--paper); background: var(--paper); color: var(--forest); }
+
+.payment-reassurance { display: grid; grid-template-columns: 55px minmax(0, 1fr) auto; align-items: center; gap: 24px; width: min(100% - var(--gutter) * 2, 1000px); min-width: 0; margin: 0 auto clamp(82px, 10vw, 132px); padding: clamp(24px, 4vw, 44px); border: 1px solid var(--line); background: #ede9de; }
+.payment-reassurance .reassurance-mark { align-self: start; color: var(--clay); font: 30px var(--serif); }
+.payment-reassurance .eyebrow { margin-bottom: 12px; }
+.payment-reassurance h2 { margin: 0 0 12px; font-size: clamp(1.7rem, 3.5vw, 2.7rem); }
+.payment-reassurance > div > p:last-child { max-width: 650px; margin: 0; color: var(--muted); font-size: 12px; line-height: 1.8; }
+.payment-reassurance > .text-link { align-self: end; white-space: nowrap; }
+.site-footer { margin-bottom: 0; }
+.footer-nav a[aria-current="page"] { color: #d6b69e; }
+
+@media (max-width: 1100px) {
+  .payment-reassurance { grid-template-columns: 36px 1fr; }
+  .payment-reassurance > .text-link { grid-column: 2; justify-self: start; }
+}
+@media (max-width: 900px) {
+  .plan-grid { grid-template-areas: "monthly three-months" "six-months yearly" "complete-course ."; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 680px) {
+  .payment-result-page main { min-height: calc(100vh - 70px); padding-block: 34px; }
+  .payment-result { padding: 25px 20px; }
+  .payment-result-summary { grid-template-columns: minmax(0, 1fr); gap: 12px; }
+  .payment-result-links { align-items: flex-start; flex-direction: column; }
+  .plans-intro { padding-block: 58px 34px; }
+  .plans-intro h1 { font-size: clamp(2.8rem, 12vw, 4.2rem); }
+  .plans-intro > p:not(.eyebrow) { font-size: 12px; }
+  .plans-section { padding-bottom: 42px; }
+  .upi-app-note { padding: 12px 14px; font-size: 10px; }
+  .plan-grid { grid-template-areas: "monthly" "three-months" "six-months" "yearly" "complete-course"; grid-template-columns: minmax(0, 1fr); gap: 14px; }
+  .plan-card { min-height: 0; padding: 25px; }
+  .plan-card:last-child { grid-column: auto; }
+  .plan-card h2 { min-height: 2.25em; font-size: clamp(1.7rem, 7vw, 2.1rem); }
+  .payment-details { grid-template-columns: 26px 1fr; gap: 13px; margin-bottom: 60px; padding: 23px 19px; }
+  .payment-details h2 { font-size: 2rem; }
+  .selected-plan-summary { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+  .payment-details-copy > p:not(.eyebrow) { font-size: 11px; }
+  .payment-contact-links { flex-direction: column; align-items: flex-start; }
+  .payment-reassurance { grid-template-columns: 26px 1fr; gap: 13px; margin-bottom: 76px; padding: 23px 19px; }
+  .payment-reassurance h2 { font-size: 2rem; }
+  .payment-reassurance > div > p:last-child { font-size: 11px; }
+}
+@media (max-width: 600px) {
+  .payment-transformation-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .payment-photo-card:last-child { grid-column: 1 / -1; width: min(100%, calc((100% - 12px) / 2)); justify-self: center; }
+}
+@media (max-width: 360px) {
+  .payment-transformation-grid { grid-template-columns: minmax(0, 1fr); }
+  .payment-photo-card:last-child { grid-column: auto; width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .plan-card, .plan-action, .payment-photo-card, .payment-testimonial-card, .payment-photo-card img, .payment-testimonial-card img { transition: none; }
+}
